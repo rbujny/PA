@@ -15,6 +15,7 @@ let desH = height;
 let isStopped = false;
 let t = 0;
 function draw() {
+  console.log("Hej")
   if(isStopped)
     return;
   let wind_mag = 200;
@@ -88,4 +89,25 @@ function rotateVec(x, y, rot){
 function Vec(x, y){
   this.x = x;
   this.y = y;
+}
+
+function changeP(value)
+{
+  let p_output = document.getElementById("p_output");
+  d.pid.Dp = value;
+  p_output.innerHTML = value;
+}
+
+function changeI(value)
+{
+  let i_output = document.getElementById("i_output");
+  d.pid.Di = value;
+  i_output.innerHTML = value;
+}
+
+function changeD(value)
+{
+  let d_output = document.getElementById("d_output");
+  d.pid.Dd = value;
+  d_output.innerHTML = value;
 }
